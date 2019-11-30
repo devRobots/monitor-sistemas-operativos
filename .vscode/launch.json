@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "modelo.productora.Main",
+            "projectName": "monitor-sistemas-operativos"
+        }
+    ]
+}
