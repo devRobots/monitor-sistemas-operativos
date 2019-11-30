@@ -6,12 +6,10 @@ import java.util.concurrent.Semaphore;
 public class Monitor {
     private Semaphore semaforo;
     private PriorityQueue<Producto> colaProductos;
-    private int tiempoTotal;
 
     public Monitor() {
         semaforo = new Semaphore(1);
         colaProductos = new PriorityQueue<>();
-        tiempoTotal = 0;
     }
 
     public void agregarProducto(Producto p) {
@@ -29,7 +27,6 @@ public class Monitor {
             semaforo.acquire();
             Producto p = colaProductos.poll();
             semaforo.release();
-            tiempoTotal += p.getTiempo();
             return p;
         } catch (Exception ex) {
             return null;
@@ -38,9 +35,5 @@ public class Monitor {
 
     public boolean hayProductosPendientes() {
         return colaProductos.size() > 0;
-    }
-
-    public int getTiempoTotal() {
-        return tiempoTotal;
     }
 }

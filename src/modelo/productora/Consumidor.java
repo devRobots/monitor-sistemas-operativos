@@ -20,7 +20,7 @@ public class Consumidor extends Thread {
 			try {
 				Producto p = monitor.liberarProducto();
 				sleep(p.getTiempo() * 2);
-				System.out.println("El consumidor " + idConsumidor + "B ha consumido el producto " + p.getId()
+				System.out.println("El consumidor " + idConsumidor + "B compro el producto " + p.getId()
 						+ "P del productor " + p.getProductor() + "A");
 			} catch (Exception ex) {
 				break;

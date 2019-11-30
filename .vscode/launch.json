@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
+            "mainClass": "modelo.editorial.Main",
+            "projectName": "monitor-sistemas-operativos"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
             "mainClass": "modelo.productora.Main",
             "projectName": "monitor-sistemas-operativos"
         }

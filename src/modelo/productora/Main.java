@@ -17,7 +17,6 @@ public class Main {
 			int cantProductos = rand.nextInt(5) + 20;
 			Productor p = new Productor(i, monitor, cantProductos);
 			productores.add(p);
-			p.start();
 		}
 
 		int cantConsumidores = rand.nextInt(10) + 10;
