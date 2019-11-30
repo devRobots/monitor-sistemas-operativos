@@ -3,7 +3,12 @@ package modelo.productora;
 public class Consumidor extends Thread {
 	private int idConsumidor;
 	private Monitor monitor;
-
+	
+	/**
+	 * Constructor del hilo Consumidor
+	 * @param idConsumidor
+	 * @param monitor
+	 */
 	public Consumidor(int idConsumidor, Monitor monitor) {
 		this.idConsumidor = idConsumidor;
 		this.monitor = monitor;
