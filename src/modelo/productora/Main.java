@@ -13,16 +13,17 @@ public class Main {
 
 		int cantProductores = rand.nextInt(5) + 5;
 		ArrayList<Productor> productores = new ArrayList<>();
-		for (int i = 1; i < cantProductores + 1; i++) {
+		for (int i = 0; i < cantProductores; i++) {
 			int cantProductos = rand.nextInt(5) + 20;
-			Productor p = new Productor(i, monitor, cantProductos);
+			Productor p = new Productor(i + 1, monitor, cantProductos);
 			productores.add(p);
+			p.start();
 		}
 
 		int cantConsumidores = rand.nextInt(10) + 10;
 		ArrayList<Consumidor> consumidores = new ArrayList<>();
-		for (int i = 1; i < cantConsumidores + 1; i++) {
-			Consumidor c = new Consumidor(i, monitor);
+		for (int i = 0; i < cantConsumidores; i++) {
+			Consumidor c = new Consumidor(i + 1, monitor);
 			consumidores.add(c);
 			c.start();
 		}

@@ -12,7 +12,7 @@ public class Producto implements Comparable<Producto> {
 		this.productor = productor;
 
 		Random rand = new Random();
-		tiempo = rand.nextInt(200) + 100;
+		tiempo = rand.nextInt(50) + 100;
 	}
 
 	public int getId() {
